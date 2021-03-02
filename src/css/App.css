@@ -1,0 +1,79 @@
+@import "./scheduler.stockholm.css";
+
+#main{
+  height: 100vh;
+  width: 100%;
+  display: flex;
+}
+
+#unplannedContainer{
+  height: 100vh;
+}
+
+.b-grid-cell{
+  border:1px solid #0000000a
+}
+
+.b-grid-header-text-content::after,.b-grid-header-text-content::before{
+  display: none;
+}
+
+#b-subgrid-1-header{
+  cursor: default;
+    pointer-events: none;
+    text-decoration: none;
+    color: grey;
+}
+
+
+.navbar-brand{
+  display: inline-flex;
+  align-items: center;
+  padding-left: 2.1em;
+  font-size: 1.3em;
+  background: url(https://www.bryntum.com/examples/scheduler/_shared/images/logo_bryntum_bw.png) no-repeat;
+  background-size: 1.6em;
+  background-position-y: center;
+  white-space: nowrap;
+}
+.color-nav {
+  background-color:#2667c8;
+}
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}

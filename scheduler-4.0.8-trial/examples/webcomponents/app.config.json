@@ -1,0 +1,4 @@
+{
+  "title": "Web Components demo",
+  "description": "This example shows how to use the Custom elements version of the grid. Currently the only browsers supporting Custom elements are Chrome and Safari."
+}

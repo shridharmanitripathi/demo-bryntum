@@ -1,0 +1,26 @@
+<!--
+ *- App template
+-->
+<header>
+    <h1><a id="title" href="../../../../#example-angular-custom-event-editor">Angular Custom Event Editor demo</a></h1>
+
+    <!-- fullscreen button -->
+    <bry-fullscreen></bry-fullscreen>
+</header>
+
+<bry-scheduler
+    #scheduler
+    [barMargin]         = "schedulerConfig.barMargin"
+    [rowHeight]         = "schedulerConfig.rowHeight"
+    [minHeight]         = "schedulerConfig.minHeight"
+    [eventStyle]        = "schedulerConfig.eventStyle"
+    [startDate]         = "schedulerConfig.startDate"
+    [endDate]           = "schedulerConfig.endDate"
+    [columns]           = "schedulerConfig.columns"
+    [eventEditFeature]  = "schedulerConfig.eventEditFeature"
+    [crudManager]       = "schedulerConfig.crudManager"
+    [resourceImagePath] = "schedulerConfig.resourceImagePath"
+    [eventRenderer]     = "eventRenderer"
+></bry-scheduler>
+
+<!-- eof -->

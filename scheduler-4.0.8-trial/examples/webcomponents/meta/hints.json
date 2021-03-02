@@ -1,0 +1,6 @@
+{
+    "#title": {
+        "title": "Custom element",
+        "content": "The scheduler below is created using a custom element called &lt;bryntum-scheduler&gt;. See source for details"
+    }
+}

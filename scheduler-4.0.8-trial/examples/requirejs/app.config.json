@@ -1,0 +1,4 @@
+{
+  "title": "RequireJS demo",
+  "description": "This example uses RequireJS to load the grid (CommonJS format)."
+}

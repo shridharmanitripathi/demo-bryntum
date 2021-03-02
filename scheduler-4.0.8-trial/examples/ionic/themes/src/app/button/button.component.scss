@@ -1,0 +1,36 @@
+:host {
+    margin : 0.5em;
+
+    button {
+        width         : 7em;
+        height        : 3em;
+        border        : none;
+        color         : #fff;
+        cursor        : pointer;
+        font-size     : 1em;
+        border-radius : .2em;
+        background    : #2d70af;
+
+        &:hover {
+            background : #2e74b4;
+        }
+
+        &:active {
+            background : #5198ff;
+        }
+    }
+
+    &.selected {
+        button {
+            background : #ff9800;
+
+            &:hover {
+                background : #df7900;
+            }
+
+            &:active {
+                background : #ff9800;
+            }
+        }
+    }
+}

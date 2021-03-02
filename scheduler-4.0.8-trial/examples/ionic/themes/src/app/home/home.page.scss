@@ -1,0 +1,34 @@
+:host {
+    --ion-toolbar-background : #2667C8;
+}
+
+#header {
+    padding             : 1.5em 1.5em 1.5em 4em;
+    background          : url(~bryntum-resources/images/logo_bryntum_bw.png) #2667C8;
+    background-repeat   : no-repeat;
+    background-size     : 30px;
+    background-position : center left 1.5em;
+    display             : flex;
+
+    h1 {
+        margin      : 0;
+        font-size   : 1.5em;
+        color       : #fff;
+        font-weight : normal;
+        align-self  : center;
+        flex        : 1;
+    }
+
+    a {
+        color           : inherit;
+        text-decoration : none;
+    }
+}
+
+scheduler {
+    flex           : 1;
+    display        : flex;
+    flex-direction : column;
+    height         : 100vh;
+}
+

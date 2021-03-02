@@ -1,0 +1,10 @@
+{
+  "dependencies": [
+    {
+      "src": "../_shared",
+      "out": "../_shared/dist"
+    }
+  ],
+  "title": "Angular Basic",
+  "description": "This example shows Basic example of integrating Bryntum Scheduler into Angular application"
+}

@@ -1,0 +1,10 @@
+{
+  "dependencies": [
+    {
+      "src": "../../_shared",
+      "out": "../../_shared/build"
+    }
+  ],
+  "title": "React Custom Event Editor demo",
+  "description": "This demo contains an example with custom React event editor popup."
+}

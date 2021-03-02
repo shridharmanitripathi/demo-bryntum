@@ -1,0 +1,27 @@
+<ion-header>
+    <ion-toolbar>
+        <div id="header">
+            <h1><a id="title" href="../../../#example-ionic-themes">Ionic themes demo</a></h1>
+            <div #headerContainer></div>
+        </div>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <scheduler
+        #scheduler
+        [autoHeight]        = false
+        [rowHeight]         = 60
+        [barMargin]         = "barMargin"
+        [events]            = "events"
+        [resources]         = "resources"
+        [timeRanges]        = "timeRanges"
+        [startDate]         = "startDate"
+        [endDate]           = "endDate"
+        [columns]           = "columns"
+        [resourceImagePath] = "resourceImagePath"
+        eventColor          = "green"
+        eventStyle          = "border"
+        [eventEdit]         = "eventEdit"
+    ></scheduler>
+</ion-content>

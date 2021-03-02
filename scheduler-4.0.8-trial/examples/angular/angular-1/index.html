@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="scheduler">
+
+<head>
+	<meta charset="UTF-8">
+	<title>Bryntum Scheduler - Angular 1 demo</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="resources/scheduler.material.css?447702" id="bryntum-theme">
+	<script src="resources/scheduler.umd.js?447702"></script>
+	<script src="app/angular.min.js?447702"></script>
+	<script src="app/app.js?447702" type="text/javascript"></script>
+	<link rel="stylesheet" href="resources/app.css?447702">
+	<link rel="icon" type="image/png" href="node_modules/bryntum-resources/images/favicon.png">
+</head>
+
+<body>
+
+<header>
+	<h1><a id="title" href="../../#example-angular-angular-1">Angular 1 demo</a></h1>
+</header>
+<div ng-controller="schedulerForm" id="app">
+	<div id="tools" class="demo-header">
+		<button class="b-button" ng-click="onAddEventClick()">Add event</button>
+		<button class="b-button red" ng-click="onRemoveEventClick()">Remove event</button>
+		<label class="sel-event">Selected event: <span>{{ selectedEvent && selectedEvent.name ? selectedEvent.name : 'None' }}</span></label>
+		<div class="barmargin">
+			<label>Bar margin:</label>
+			<input type="number" min="0" max="15" ng-model="barMargin" ng-change="barMarginChange()">
+		</div>
+	</div>
+	<scheduler
+			id="myScheduler"
+			startdate="2018-02-07T08:00"
+			enddate="2018-02-07T22:00"
+			viewpreset="hourAndDay"
+	>
+		<column text="Staff" field="name" type="resourceInfo" width="130"></column>
+	</scheduler>
+</div>
+</body>
+
+</html>

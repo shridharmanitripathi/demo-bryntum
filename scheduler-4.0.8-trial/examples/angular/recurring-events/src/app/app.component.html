@@ -1,0 +1,25 @@
+<!--
+ * App template
+-->
+<header>
+  <h1><a id="title" href="../../../../#example-angular-recurring-events">Angular Recurring Events demo</a></h1>
+
+  <!-- fullscreen button -->
+  <bry-fullscreen></bry-fullscreen>
+</header>
+
+<bry-scheduler
+  #scheduler
+  [rowHeight]             = "schedulerConfig.rowHeight"
+  [sortFeature]           = "schedulerConfig.features.sort"
+  [eventTooltipFeature]   = "schedulerConfig.features.eventTooltip"
+  [enableRecurringEvents] = "schedulerConfig.enableRecurringEvents"
+  [labelsFeature]         = "schedulerConfig.features.labels"
+  [columns]               = "schedulerConfig.columns"
+  [crudManager]           = "schedulerConfig.crudManager"
+  [startDate]             = "schedulerConfig.startDate"
+  [endDate]               = "schedulerConfig.endDate"
+  [viewPreset]            = "schedulerConfig.viewPreset"
+  [eventRenderer]         = "schedulerConfig.eventRenderer"
+  [resourceImagePath]     = "schedulerConfig.resourceImagePath"
+></bry-scheduler>

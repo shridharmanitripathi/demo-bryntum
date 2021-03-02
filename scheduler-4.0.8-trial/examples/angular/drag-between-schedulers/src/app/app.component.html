@@ -1,0 +1,55 @@
+<!--
+ *- Application template
+-->
+<header>
+    <h1><a id="title" href="../../../../#example-angular-drag-between-schedulers">Angular Drag between Schedulers demo</a></h1>
+
+    <bry-button
+        icon = "b-icon b-icon-search-plus"
+        tooltip = "Zoom in"
+        [onAction] = "onZoomIn"
+    ></bry-button>
+
+    <bry-button
+        icon = "b-icon b-icon-search-minus"
+        tooltip = "Zoom out"
+        [onAction] = "onZoomOut"
+    ></bry-button>
+
+    <bry-fullscreen></bry-fullscreen>
+</header>
+
+<div class="container">
+    <bry-scheduler
+        #scheduler1
+        [schedulerId]       = "scheduler1Config.id"
+        [barMargin]         = "scheduler1Config.barMargin"
+        [columns]           = "scheduler1Config.columns"
+        [endDate]           = "scheduler1Config.endDate"
+        [events]            = "scheduler1Config.events"
+        [minHeight]         = "scheduler1Config.minHeight"
+        [resources]         = "scheduler1Config.resources"
+        [startDate]         = "scheduler1Config.startDate"
+        [viewPreset]        = "scheduler1Config.viewPreset"
+        [eventDragFeature]  = "scheduler1Config.eventDragFeature"
+        [sortFeature]       = "scheduler1Config.sortFeature"
+        [stripeFeature]     = "scheduler1Config.stripeFeature"
+        [resourceImagePath] = "scheduler1Config.resourceImagePath"
+    ></bry-scheduler>
+
+    <bry-scheduler
+        #scheduler2
+        [barMargin]         = "scheduler2Config.barMargin"
+        [columns]           = "scheduler2Config.columns"
+        [events]            = "scheduler2Config.events"
+        [minHeight]         = "scheduler2Config.minHeight"
+        [partner]           = "scheduler1Config.id"
+        [resources]         = "scheduler2Config.resources"
+        [eventDragFeature]  = "scheduler2Config.eventDragFeature"
+        [sortFeature]       = "scheduler2Config.sortFeature"
+        [stripeFeature]     = "scheduler2Config.stripeFeature"
+        [resourceImagePath] = "scheduler2Config.resourceImagePath"
+    ></bry-scheduler>
+</div>
+
+<!-- eof -->

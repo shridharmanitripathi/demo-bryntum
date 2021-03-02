@@ -1,0 +1,130 @@
+/**
+ * App global styles
+ */
+@import "bryntum-scheduler/scheduler.material.css";
+
+@font-face {
+    font-family: Lato;
+    src: url('bryntum-angular-shared/assets/fonts/lato/Lato-Regular.woff2') format('woff2'), /* Super Modern Browsers */
+         url('bryntum-angular-shared/assets/fonts/lato/Lato-Italic.woff2') format('woff2'), /* Super Modern Browsers */
+         url('bryntum-angular-shared/assets/fonts/lato/Lato-Regular.woff') format('woff'), /* Pretty Modern Browsers */
+         url('bryntum-angular-shared/assets/fonts/lato/Lato-Italic.woff') format('woff'); /* Pretty Modern Browsers */
+    font-weight: 400;
+}
+
+body {
+    font-family : Lato, sans-serif;
+    font-size   : 14px;
+    height      : 100%;
+    padding     : 0;
+    margin      : 0;
+}
+
+app-root {
+    flex           : 1;
+    display        : flex;
+    flex-direction : column;
+    height         : 100vh;
+}
+
+bry-scheduler {
+    flex : 1;
+}
+
+.b-sch-event {
+    border-radius : 3px;
+}
+
+app-grid {
+    height      : 100%;
+    display     : block;
+    flex        : none;
+    width       : 140px;
+    border-left : 1px solid #e0e0e0;
+}
+
+.b-sch-event-wrap .b-sch-event {
+    border-radius   : 3px;
+    box-shadow      : 0 1px 1px 0 rgba(0, 0, 0, .25);
+    flex-direction  : column;
+    align-items     : flex-start;
+    justify-content : space-around;
+}
+.b-grid#equipment {
+    flex       : 0 0 140px;
+    border-left : 2px solid #aaa;
+
+    .b-grid-cell {
+        cursor : pointer;
+    }
+}
+
+app-grid {
+    flex-direction  : column;
+    justify-content : center;
+
+    .b-grid-header-text {
+        display:none;
+    }
+}
+
+.b-equipment {
+    flex-direction  : column;
+    justify-content : center;
+
+    i {
+        margin-right  : 10px;
+        color         : #4887e5;
+        font-size     : 2em;
+        margin-bottom : 0.3em;
+    }
+
+    &.b-dragging {
+        justify-content : center;
+        background      : green;
+        color           : #fff;
+
+        i {
+            color           : #fff;
+        }
+    }
+
+    &.b-drag-invalid {
+      background : red;
+    }
+
+}
+
+.b-sch-event-header,
+.b-sch-event-footer {
+    display     : flex;
+    flex        : 1;
+    align-items : center;
+}
+
+.b-sch-event-footer {
+    padding : 0;
+    margin  : 0;
+}
+
+.b-grid-header {
+    height: 57px;
+}
+
+.b-filter-bar-field {
+    margin : 0;
+}
+
+.b-aborting.b-grid-cell {
+    transition : transform 0.3s !important;
+
+    // https://app.assembla.com/spaces/bryntum/tickets/7168-drag-drop-cleanup-code-on-abort-is-interfering-with-animation/details#
+    background : red;
+    position       : absolute !important;
+    z-index        : 10000;
+    pointer-events : none;
+    opacity        : 0.8;
+    box-sizing     : border-box;
+}
+
+// eof

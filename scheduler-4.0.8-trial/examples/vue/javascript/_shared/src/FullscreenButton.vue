@@ -1,0 +1,54 @@
+<!--
+ * Fullscreen Button implementation (wrapper of Bryntum button)
+ -->
+<template>
+    <div></div>
+</template>
+
+<script>
+    // we import scheduler.umd for IE11 compatibility only. If you don't use IE import:
+    import { Fullscreen, WidgetHelper } from 'bryntum-scheduler';
+    // import { Fullscreen, WidgetHelper } from 'bryntum-scheduler/scheduler.umd';
+
+    // export the button
+    export default {
+        name : 'fullscreen-button',
+
+        mounted() {
+            const button = Fullscreen.enabled ? WidgetHelper.createWidget({
+                type       : 'button',
+                appendTo   : this.$el,
+                icon       : 'b-icon b-icon-fullscreen',
+                tooltip    : 'Fullscreen',
+                toggleable : true,
+                cls        : 'b-blue b-raised',
+                onToggle   : ({ pressed }) => {
+                    if (pressed) {
+                        Fullscreen.request(document.documentElement);
+                    }
+                    else {
+                        Fullscreen.exit();
+                    }
+                }
+            }) : null; // eo button
+
+            if(button) {
+                Fullscreen.onFullscreenChange(() => {
+                    this.button.pressed = Fullscreen.isFullscreen;
+                });
+
+                this.button = button;
+            }
+        }, // eo function mounted
+
+        beforeDestroy() {
+            if(this.button) {
+                Fullscreen.onFullscreenChange(null);
+            }
+        } // eo function beforeDestroy
+
+    } // eo export button
+
+</script>
+
+<!-- eof -->

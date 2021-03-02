@@ -1,0 +1,101 @@
+body {
+    font-family : Roboto, sans-serif;
+    margin:0;
+}
+
+.demo-header {
+    padding             : 1.5em 0.2em 1.5em 4em;
+    background          : url(../node_modules/bryntum-resources/images/logo_bryntum_bw.png) #2667C8;
+    background-repeat   : no-repeat;
+    background-size     : 30px;
+    background-position : center left 1.5em;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.demo-header h1 {
+    margin      : 0;
+    font-size   : 1.5em;
+    color       : #fff;
+    font-weight : normal;
+}
+
+.demo-header a {
+    color           : inherit;
+    text-decoration : none;
+}
+
+#app {
+    height  : 100%;
+    display: flex;
+}
+
+#tools {
+    display       : flex;
+    /* margin-bottom : 1em; */
+    align-items   : center;
+}
+
+button {
+    width         : 8em;
+    padding       : .7em;
+    background    : #8BC34A;
+    border        : none;
+    color         : #fff;
+    cursor        : pointer;
+    font-size     : 1em;
+    font-family   : "Source Sans Pro", "Helvetica Neue", Helvetica, sans-serif;
+    border-radius : 2px;
+    margin-right  : .5em;
+}
+
+button:hover {
+    background : #9CCC65;
+}
+
+button:active {
+    background : #9CCC65;
+}
+
+button:disabled {
+    background : #FF9269 !important;
+}
+
+button.red {
+    background : #F44336;
+}
+
+button.red:hover {
+    background : #EF5350;
+}
+
+.sel-event {
+    width:20em;
+    color:white;
+}
+
+.sel-event span {
+    font-size : 1.1em;
+}
+.barmargin {
+    margin-right: 0.45em;
+    color:white;
+}
+.barmargin input {
+    font-size     : 15px;
+    font-family   : inherit;
+    padding       : .7em;
+    border-radius : 2px;
+    border        : 1px solid #31AA73;
+    margin-left   : .5em;
+}
+
+html, body {
+    height: 100%;
+}
+
+scheduler {
+    flex : 1;
+}

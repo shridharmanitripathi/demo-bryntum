@@ -1,0 +1,15 @@
+/**
+ * Application global sass file
+ *
+ * Taken from the original example. Modified, amended.
+ */
+
+#content {
+  display : flex;
+  flex-direction : column;
+  flex : 1;
+}
+
+.b-react-scheduler-container {
+  flex : 1;
+}

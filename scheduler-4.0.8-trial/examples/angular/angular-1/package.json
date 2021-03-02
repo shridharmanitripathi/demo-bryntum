@@ -1,0 +1,22 @@
+{
+  "name": "angular-1-demo",
+  "version": "1.0.0",
+  "scripts": {
+    "build": "echo 'Open index.html in browser to start'",
+    "postinstall": "postinstall"
+  },
+  "postinstall": {
+    "node_modules/bryntum-scheduler/scheduler.umd.js": "copy resources/scheduler.umd.js",
+    "node_modules/bryntum-scheduler/scheduler.material.css": "copy resources/scheduler.material.css",
+    "node_modules/bryntum-scheduler/fonts": "copy resources/fonts",
+    "node_modules/bryntum-resources/images/favicon.png": "copy resources/favicon.png",
+    "node_modules/bryntum-resources/images/logo_bryntum_bw.png": "copy resources/logo_bryntum_bw.png",
+    "node_modules/bryntum-resources/images/users": "copy resources/users"
+  },
+  "private": true,
+  "dependencies": {
+    "bryntum-scheduler": "file:../../../build",
+    "bryntum-resources": "file:../../_shared",
+    "postinstall": "~0.4.2"
+  }
+}

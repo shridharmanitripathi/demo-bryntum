@@ -1,0 +1,50 @@
+{
+  "name": "react_typescript",
+  "version": "0.1.0",
+  "private": true,
+  "homepage": "./",
+  "scripts": {
+    "builder": "node ../../../_shared/scripts/build.js",
+    "guide": "npm run builder guide scheduler react",
+    "start": "cross-env NODE_OPTIONS='--max-old-space-size=8192' react-scripts start",
+    "build": "cross-env NODE_OPTIONS='--max-old-space-size=8192' react-scripts build || npm run guide",
+    "test": "cross-env NODE_OPTIONS='--max-old-space-size=8192' react-scripts test --env=jsdom",
+    "eject": "cross-env NODE_OPTIONS='--max-old-space-size=8192' react-scripts eject",
+    "preinstall": "npm run builder",
+    "postinstall": "postinstall || npm run guide"
+  },
+  "postinstall": {
+    "node_modules/bryntum-resources/images/users": "copy public/users",
+    "node_modules/bryntum-resources/images/favicon.png": "copy public/favicon.png"
+  },
+  "dependencies": {
+    "bryntum-react-shared": "file:../../_shared/build",
+    "bryntum-resources": "file:../../../_shared",
+    "bryntum-scheduler": "file:../../../../build",
+    "core-js": "~3.6.5",
+    "cross-env": "~7.0.2",
+    "react": "~16.13.1",
+    "react-dom": "~16.13.1",
+    "react-scripts": "~3.4.1"
+  },
+  "devDependencies": {
+    "@types/jest": "~23.3.10",
+    "@types/node": "~10.12.12",
+    "@types/react": "~16.7.13",
+    "@types/react-dom": "~16.0.11",
+    "postinstall": "~0.4.2",
+    "typescript": "~3.9.7"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
+}

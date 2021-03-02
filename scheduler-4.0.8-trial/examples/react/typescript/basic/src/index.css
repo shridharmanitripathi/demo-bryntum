@@ -1,0 +1,106 @@
+body {
+    visibility  : unset;
+    font-family : -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+    font-size   : 15px;
+    margin      : 0;
+}
+
+body .outer > header {
+    padding             : 1.5em .5em 1.5em 4em;
+    background          : url(~bryntum-resources/images/logo_bryntum_bw.png) #2667C8;
+    background-repeat   : no-repeat;
+    background-size     : 30px;
+    background-position : center left 1.5em;
+    display             : flex;
+}
+
+body .outer > header h1 {
+    margin      : 0;
+    font-size   : 1.5em;
+    color       : #fff;
+    font-weight : normal;
+    flex        : 1;
+    align-self  : center;
+}
+
+body .outer > header a {
+    color           : inherit;
+    text-decoration : none;
+}
+
+body .outer > header button {
+    width         : 2.8em;
+    background    : #8BC34A;
+    border        : none;
+    color         : #fff;
+    cursor        : pointer;
+    font-size     : 1em;
+    font-family   : "Source Sans Pro", "Helvetica Neue", Helvetica, sans-serif;
+    border-radius : 2px;
+    margin-right  : .5em;
+}
+
+body .outer > header button:hover {
+    background : #9CCC65;
+}
+
+body .outer > header button:active {
+    background : #9CCC65;
+}
+
+body .outer > header button:disabled {
+    background : #ccbdb8 !important;
+    cursor     : default;
+}
+
+body .outer > header button.red {
+    background : #F44336;
+}
+
+body .outer > header button.red:hover {
+    background : #EF5350;
+}
+
+body .outer > header .selected-event {
+    margin-right : 2em;
+    align-self   : center;
+    color        : #fff;
+}
+
+body .outer > header .selected-event span {
+    font-size : 1.1em;
+}
+
+body .outer > header .barmargin label {
+    color        : #fff;
+    margin-right : .5em;
+}
+
+body .outer > header .barmargin input {
+    font-size     : 1em;
+    font-family   : inherit;
+    padding       : .7em;
+    border-radius : 2px;
+    border        : none;
+    margin-right  : .5em;
+}
+
+body #app {
+    height : 100%;
+}
+
+.b-sch-range {
+    background : repeating-linear-gradient(-55deg, #ddd, #ddd 10px, #eee 5px, #eee 20px);
+    opacity    : 0.5;
+}
+
+.info {
+    flex-direction : column;
+}
+
+.desc {
+    font-size   : .8em;
+    font-weight : 300;
+}
+
+/*# sourceMappingURL=app.css.map */

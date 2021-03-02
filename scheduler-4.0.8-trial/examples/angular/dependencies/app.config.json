@@ -1,0 +1,10 @@
+{
+  "dependencies": [
+    {
+      "src": "../_shared",
+      "out": "../_shared/dist"
+    }
+  ],
+  "title": "Dependencies Angular demo",
+  "description": "his example shows how you can have dependencies visualized between tasks by loading data using the CrudManager in Angular."
+}

@@ -1,0 +1,67 @@
+<!--
+ *- App template
+-->
+
+<header>
+    <h1><a id="title" href="../../../../#example-angular-filtering">Angular Filtering demo</a></h1>
+
+    <!-- filter input field -->
+    <div class="inputfield">
+        <input
+            type="text" (input)="filterEvents($event.target.value)"
+            placeholder="Filter tasks by name"
+            class="by-name"
+        >
+    </div>
+
+    <!-- highlight input field -->
+    <div class="inputfield">
+        <input
+            type="text" (input)="highlightEvents($event.target.value)"
+            placeholder="Highlight task"
+        >
+    </div>
+
+    <!-- date input field -->
+    <div #datePickerContainer class="datePickerContainer"></div>
+
+    <!-- add event button -->
+    <bry-button
+        (click) = "onAddEventClick()"
+        icon    = "b-fa b-fa-plus"
+    ></bry-button>
+
+    <!-- remove event button -->
+    <bry-button
+        (click)    = "onRemoveEventClick()"
+        [disabled] = "scheduler.selectedEvent == ''"
+        icon       = "b-fa b-fa-trash"
+        color      = "b-red b-raised"
+    ></bry-button>
+
+    <!-- fullscreen button -->
+    <bry-fullscreen></bry-fullscreen>
+</header>
+
+<bry-scheduler
+    #scheduler
+    [barMargin]         = "barMargin"
+    [columns]           = "columns"
+    [eventRenderer]     = "eventRenderer"
+    [events]            = "events"
+    [minHeight]         = 100
+    [resources]         = "resources"
+    [rowHeight]         = 60
+    [startDate]         = "startDate"
+    [endDate]           = "endDate"
+    [timeRanges]        = "timeRanges"
+    eventColor          = "green"
+    eventStyle          = "border"
+    [resourceImagePath] = "resourceImagePath"
+    [eventEditFeature]  = "eventEditFeature"
+    [filterBarFeature]  = "filterBarFeature"
+    [groupFeature]      = "groupFeature"
+    (onSchedulerEvents) = "onSchedulerEvents($event)"
+></bry-scheduler>
+
+<!-- eof -->

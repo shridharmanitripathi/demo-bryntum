@@ -1,0 +1,22 @@
+* {
+    font-family : Roboto, sans-serif;
+}
+
+body {
+    font-size : 14px;
+}
+
+scheduler,
+scheduler > div {
+    width  : 100%;
+    height : calc(100vh - 90px);
+}
+
+.b-sch-event-content {
+    display: flex;
+}
+
+.desc {
+    font-size   : .8em;
+    font-weight : 300;
+}

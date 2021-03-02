@@ -1,0 +1,5 @@
+node_modules/
+scheduler.module.js
+scheduler.umd.js
+Scheduler.vue
+FullscreenButton.vue

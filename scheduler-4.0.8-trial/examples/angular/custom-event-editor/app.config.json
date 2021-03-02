@@ -1,0 +1,10 @@
+{
+  "dependencies": [
+    {
+      "src": "../_shared",
+      "out": "../_shared/dist"
+    }
+  ],
+  "title": "Angular Custom Event Editor demo",
+  "description": "Shows how to use Angular-based custom event editor instead of the default one."
+}

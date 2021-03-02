@@ -1,0 +1,35 @@
+{
+  "name": "drag-from-grid",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "builder": "node ../../../_shared/scripts/build.js",
+    "guide": "npm run builder guide scheduler vue",
+    "serve": "vue-cli-service serve --mode=development",
+    "start": "vue-cli-service serve --mode=development",
+    "build": "vue-cli-service build --mode=development || npm run guide",
+    "tslint": "npx tslint --fix src/**/*.ts",
+    "postinstall": "postinstall || npm run guide"
+  },
+  "postinstall": {
+    "node_modules/bryntum-resources/images/users": "copy public/images/users",
+    "node_modules/bryntum-resources/images/favicon.png": "copy public/favicon.png",
+    "../wrappers": "copy src/components/wrappers"
+  },
+  "dependencies": {
+    "bryntum-resources": "file:../../../_shared",
+    "bryntum-scheduler": "file:../../../../build",
+    "vue": "~2.5.21",
+    "vue-class-component": "~6.0.0",
+    "vue-property-decorator": "~7.0.0"
+  },
+  "devDependencies": {
+    "@vue/cli-plugin-babel": "~3.3.0",
+    "@vue/cli-plugin-typescript": "~3.3.0",
+    "@vue/cli-service": "~3.3.0",
+    "cross-env": "^7.0.2",
+    "postinstall": "~0.4.2",
+    "typescript": "~3.0.0",
+    "vue-template-compiler": "~2.5.21"
+  }
+}

@@ -1,0 +1,94 @@
+:host {
+    --ion-toolbar-background : #2667C8;
+}
+
+#header {
+    padding             : 1.5em .5em 1.5em 4em;
+    background          : url(~bryntum-resources/images/logo_bryntum_bw.png) #2667C8;
+    background-repeat   : no-repeat;
+    background-size     : 30px;
+    background-position : center left 1.5em;
+    display             : flex;
+
+    h1 {
+        margin      : 0;
+        font-size   : 1.5em;
+        color       : #fff;
+        font-weight : normal;
+        align-self  : center;
+        flex        : 1;
+    }
+
+    a {
+        color           : inherit;
+        text-decoration : none;
+    }
+
+    button {
+        width         : 2.8em;
+        background    : #8bc34a;
+        border        : none;
+        color         : #fff;
+        cursor        : pointer;
+        font-size     : 1em;
+        border-radius : 2px;
+        margin-right  : .5em;
+
+        &:hover {
+            background : #9ccc65;
+        }
+
+        &:active {
+            background : #9ccc65;
+        }
+
+        &:disabled {
+            background : #ccbdb8 !important;
+            cursor     : default;
+        }
+
+        &.red {
+            background : #f44336;
+        }
+
+        &.red:hover {
+            background : #ef5350;
+        }
+    }
+
+    .sel-event {
+        margin-right : 2em;
+        align-self   : center;
+        color        : #fff;
+
+        span {
+            font-weight : bold;
+            margin-left : .5em;
+        }
+    }
+
+    .barmargin {
+        label {
+            color        : #fff;
+            margin-right : .5em;
+        }
+
+        input {
+            font-size     : 1em;
+            font-family   : inherit;
+            padding       : .7em;
+            border-radius : 2px;
+            border        : none;
+            margin-left   : .5em;
+            color         : #757575;
+        }
+    }
+}
+
+scheduler {
+    flex           : 1;
+    display        : flex;
+    flex-direction : column;
+    height         : 100vh;
+}
+

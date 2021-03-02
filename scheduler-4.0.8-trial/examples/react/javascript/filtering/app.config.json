@@ -1,0 +1,10 @@
+{
+  "dependencies": [
+    {
+      "src": "../../_shared",
+      "out": "../../_shared/build"
+    }
+  ],
+  "title": "React Filtering Demo",
+  "description": "This shows how to use Bryntum Scheduler and Widgets to take user input and filter or highlight the scheduler tasks."
+}

@@ -1,0 +1,22 @@
+<!--
+ - App template
+-->
+<header>
+    <h1><a id="title" href="../../../../#example-angular-localization">{{ t('demoTitle') }}</a></h1>
+    <bry-lang-select [value]= "currentLanguage" (change)="changeLanguage($event)"></bry-lang-select>
+    <bry-fullscreen></bry-fullscreen>
+</header>
+<bry-scheduler
+    #scheduler
+    [barMargin]         = "schedulerConfig.barMargin"
+    [columns]           = "schedulerConfig.columns"
+    [crudManager]       = "schedulerConfig.crudManager"
+    [endDate]           = "schedulerConfig.endDate"
+    [eventColor]        = "schedulerConfig.eventColor"
+    [minHeight]         = "schedulerConfig.minHeight"
+    [rowHeight]         = "schedulerConfig.rowHeight"
+    [startDate]         = "schedulerConfig.startDate"
+    [viewPreset]        = "schedulerConfig.viewPreset"
+    [resourceImagePath] = "schedulerConfig.resourceImagePath"
+    [timeRangesFeature] = "schedulerConfig.timeRangesFeature"
+></bry-scheduler>

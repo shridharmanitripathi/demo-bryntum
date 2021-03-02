@@ -1,0 +1,43 @@
+/**
+ *- Application global styles
+ */
+
+@font-face {
+    font-family: "Source Sans Pro";
+    src: url("assets/SourceSansPro-Regular.ttf.woff2") format("woff2"), url("assets/SourceSansPro-Regular.ttf.woff") format("woff");
+    font-weight: 400;
+}
+
+html, body, #app {
+    height: 100%;
+}
+
+body {
+    visibility: unset;
+    font-family: "Source Sans Pro", "Helvetica Neue", Helvetica, sans-serif;
+    font-size: 15px;
+    margin: 0;
+}
+
+#app {
+    display:flex;
+    flex:1;
+    flex-direction : column;
+}
+
+.app-header h1 {
+    font-weight: 500;
+}
+
+.v-application header a {
+    color: white;
+}
+
+.b-scheduler-container {
+    flex:1;
+}
+
+.v-application--wrap {
+    height:100vh;
+}
+// eof

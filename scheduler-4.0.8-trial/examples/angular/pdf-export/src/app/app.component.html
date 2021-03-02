@@ -1,0 +1,36 @@
+<!--
+* App component template
+-->
+<header>
+    <h1><a id="title" href="../../../../#example-angular-pdf-export">Angular PDF Export demo</a></h1>
+    <bry-button
+        (click)    = "onExportClick()"
+        cls        = "b-skip-test"
+        color      = "b-orange b-raised"
+        text       = "Export"
+        style      = "margin-right: 1em"
+    ></bry-button>
+    <bry-fullscreen></bry-fullscreen>
+</header>
+
+<bry-scheduler
+    #scheduler
+    [barMargin]            = "schedulerConfig.barMargin"
+    [columns]              = "schedulerConfig.columns"
+    [crudManager]          = "schedulerConfig.crudManager"
+    [eventColor]           = "schedulerConfig.eventColor"
+    [eventRenderer]        = "schedulerConfig.eventRenderer"
+    [eventStyle]           = "schedulerConfig.eventStyle"
+    [minHeight]            = "schedulerConfig.minHeight"
+    [rowHeight]            = "schedulerConfig.rowHeight"
+    [startDate]            = "schedulerConfig.startDate"
+    [endDate]              = "schedulerConfig.endDate"
+    [viewPreset]           = "schedulerConfig.viewPreset"
+    [resourceImagePath]    = "schedulerConfig.resourceImagePath"
+    [dependenciesFeature]  = "schedulerConfig.dependenciesFeature"
+    [eventDragFeature]     = "schedulerConfig.eventDragFeature"
+    [stripeFeature]        = "schedulerConfig.stripeFeature"
+    [timeRangesFeature]    = "schedulerConfig.timeRangesFeature"
+    [pdfExportFeature]     = "schedulerConfig.pdfExportFeature"
+
+></bry-scheduler>

@@ -1,0 +1,30 @@
+<header>
+    <h1><a id="title" href="../../../../#example-angular-angular-8">Angular 8 demo</a></h1>
+    <label class="sel-event">Selected event: <span>{{ scheduler.selectedEvent || 'None' }}</span></label>
+
+    <div class="barmargin">
+        <label>Bar margin</label>
+        <input min="0" max="20" type="number" [value]="barMargin" (input)="barMargin = $event.target.value-0">
+    </div>
+    <div #datePickerContainer class="datePickerContainer"></div>
+    <button (click)="onAddEventClick()"><i class="b-fa b-fa-plus"></i></button>
+    <button class="red" (click)="onRemoveEventClick()" [disabled]="scheduler.selectedEvent == ''"><i class="b-fa b-fa-trash"></i></button>
+</header>
+
+<bry-scheduler
+    #scheduler
+    [rowHeight]         = "schedulerConfig.rowHeight"
+    [minHeight]         = "schedulerConfig.minHeight"
+    [barMargin]         = "barMargin"
+    [startDate]         = "schedulerConfig.startDate"
+    [endDate]           = "schedulerConfig.endDate"
+    [columns]           = "schedulerConfig.columns"
+    [crudManager]       = "schedulerConfig.crudManager"
+    [eventColor]        = "schedulerConfig.eventColor"
+    [eventStyle]        = "schedulerConfig.eventStyle"
+    [eventRenderer]     = "schedulerConfig.eventRenderer"
+    [timeRangesFeature] = "schedulerConfig.timeRangesFeature"
+    [eventEditFeature]  = "schedulerConfig.eventEditFeature"
+    [resourceImagePath] = "schedulerConfig.resourceImagePath"
+    (onSchedulerEvents) = "onSchedulerEvents($event)"
+></bry-scheduler>

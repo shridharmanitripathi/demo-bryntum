@@ -1,0 +1,33 @@
+<!--
+* App template
+-->
+<header>
+  <h1><a id="title" href="../../../../#example-angular-tasks">Angular Tasks demo</a></h1>
+  <bry-fullscreen></bry-fullscreen>
+</header>
+
+<div id="app">
+    <bry-scheduler
+        #scheduler
+        [barMargin]             = "schedulerConfig.barMargin"
+        [columns]               = "schedulerConfig.columns"
+        [crudManager]           = "schedulerConfig.crudManager"
+        [eventColor]            = "schedulerConfig.eventColor"
+        [eventRenderer]         = "schedulerConfig.eventRenderer"
+        [eventStyle]            = "schedulerConfig.eventStyle"
+        [minHeight]             = "schedulerConfig.minHeight"
+        [rowHeight]             = "schedulerConfig.rowHeight"
+        [startDate]             = "schedulerConfig.startDate"
+        [endDate]               = "schedulerConfig.endDate"
+        [viewPreset]            = "schedulerConfig.viewPreset"
+        [resourceImagePath]     = "schedulerConfig.resourceImagePath"
+        [cellEditFeature]       = "schedulerConfig.cellEditFeature"
+        [eventDragFeature]      = "schedulerConfig.eventDragFeature"
+        [eventEditFeature]      = "schedulerConfig.eventEditFeature"
+        [eventResizeFeature]    = "schedulerConfig.eventResizeFeature"
+        [nonWorkingTimeFeature] = "schedulerConfig.nonWorkingTimeFeature"
+        [treeFeature]           = "schedulerConfig.treeFeature"
+        (onSchedulerEvents)     = "dispatchEvent($event)"
+    ></bry-scheduler>
+
+</div>

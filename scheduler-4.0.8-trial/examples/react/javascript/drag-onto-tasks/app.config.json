@@ -1,0 +1,10 @@
+{
+  "dependencies": [
+    {
+      "src": "../../_shared",
+      "out": "../../_shared/build"
+    }
+  ],
+  "title": "React drag onto tasks demo",
+  "description": "This demo contains a React drag onto tasks example."
+}

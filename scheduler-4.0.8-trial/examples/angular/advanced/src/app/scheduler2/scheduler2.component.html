@@ -1,0 +1,18 @@
+<!--
+ *- Scheduler2 template file
+-->
+ <bry-scheduler
+    #scheduler2
+    [barMargin]         = "(store.select('barMargin') | async).barMargin"
+    [columns]           = "schedulerConfig.columns"
+    [eventColor]        = "schedulerConfig.eventColor"
+    [minHeight]         = "schedulerConfig.minHeight"
+    [rowHeight]         = "schedulerConfig.rowHeight"
+    [startDate]         = "schedulerConfig.startDate"
+    [endDate]           = "schedulerConfig.endDate"
+    [resources]         = "schedulerConfig.resources"
+    [events]            = "schedulerConfig.events"
+    [resourceImagePath] = "schedulerConfig.resourceImagePath"
+></bry-scheduler>
+
+<!-- eof -->

@@ -1,0 +1,38 @@
+<ion-header>
+    <ion-toolbar>
+        <div id="header">
+             <h1><a id="title" href="../../../#example-ionic-ionic-4">Ionic demo</a></h1>
+            <label class="sel-event">Selected event: <span>{{ scheduler.selectedEvent || 'None' }}</span></label>
+            <div class="barmargin">
+                <label>Bar margin
+                    <input min="0" max="20" type="number" [value]="barMargin"
+                           (input)="barMargin = $event.target.value-0">
+                </label>
+            </div>
+            <button (click)="onAddEventClick()"><i class="b-fa b-fa-plus"></i></button>
+            <button class="red" (click)="onRemoveEventClick()" [disabled]="scheduler.selectedEvent == ''">
+                <i class="b-fa b-fa-trash"></i></button>
+        </div>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <scheduler
+        #scheduler
+        [autoHeight]        = false
+        [rowHeight]         = 60
+        [barMargin]         = "barMargin"
+        [events]            = "events"
+        [resources]         = "resources"
+        [timeRanges]        = "timeRanges"
+        [startDate]         = "startDate"
+        [endDate]           = "endDate"
+        [columns]           = "columns"
+        eventColor          = "green"
+        eventStyle          = "border"
+        [eventRenderer]     = "eventRenderer"
+        [eventEdit]         = "eventEdit"
+        [resourceImagePath] = "resourceImagePath"
+        (onSchedulerEvents) = "onSchedulerEvents($event)"
+    ></scheduler>
+</ion-content>

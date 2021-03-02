@@ -1,0 +1,10 @@
+{
+  "dependencies": [
+    {
+      "src": "../../_shared",
+      "out": "../../_shared/build"
+    }
+  ],
+  "title": "React + TypeScript basic demo",
+  "description": "This demo contains a React component that wraps Bryntum Grid using TypeScript and a small demo to showcase it."
+}

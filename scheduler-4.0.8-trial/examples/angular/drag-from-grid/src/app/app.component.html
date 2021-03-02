@@ -1,0 +1,31 @@
+<!--
+ *- App template
+-->
+<header>
+    <h1><a id="title" href="../../../../#example-angular-drag-from-grid">Angular Drag from Grid demo</a></h1>
+    <button-reschedule
+        (toggle)="onToggle($event)"
+    ></button-reschedule>
+    <bry-fullscreen></bry-fullscreen>
+</header>
+
+<div id="content">
+    <bry-scheduler
+        #scheduler
+        [barMargin]         = "schedulerConfig.barMargin"
+        [columns]           = "schedulerConfig.columns"
+        [crudManager]       = "schedulerConfig.crudManager"
+        [eventColor]        = "schedulerConfig.eventColor"
+        [rowHeight]         = "schedulerConfig.rowHeight"
+        [startDate]         = "schedulerConfig.startDate"
+        [endDate]           = "schedulerConfig.endDate"
+        [viewPreset]        = "schedulerConfig.viewPreset"
+        [eventMenuFeature]  = "schedulerConfig.eventMenuFeature"
+        [stripeFeature]     = "schedulerConfig.stripeFeature"
+        [timeRangesFeature] = "schedulerConfig.timeRangesFeature"
+        [resourceImagePath] = "schedulerConfig.resourceImagePath"
+    ></bry-scheduler>
+    <app-grid></app-grid>
+</div>
+
+<!-- eof -->

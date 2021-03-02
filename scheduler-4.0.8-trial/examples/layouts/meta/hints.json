@@ -1,0 +1,16 @@
+{
+    ".b-sch-event": {
+        "title": "Stacked by default",
+        "content": "Overlapping events are stacked on top of each other, making the resource row grow in height to fit all events"
+    },
+    "[data-ref=packButton]": {
+        "title": "Pack",
+        "content": "Try packing, which makes overlapping events shrink to fit into a fixed row height",
+        "align" : "t50-b10"
+    },
+    "[data-ref=noneButton]": {
+        "title": "Overlap",
+        "content": "Try overlap, which lets events overlap and thus does not affect their height or the rows",
+        "align" : "t50-b90"
+    }
+}

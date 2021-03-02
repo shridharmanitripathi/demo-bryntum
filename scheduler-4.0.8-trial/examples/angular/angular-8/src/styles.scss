@@ -1,0 +1,34 @@
+/**
+ * App global scss file
+ *
+ * You can add global styles to this file, and also import other style files
+ */
+.info {
+    flex-direction : column;
+}
+
+.desc {
+    font-size   : .8em;
+    font-weight : 300;
+}
+
+.striped {
+    background : repeating-linear-gradient(-55deg, rgba(230,230,230,0.3), rgba(230,230,230,0.3) 10px, rgba(240,240,240,0.3) 5px, rgba(240,240,240,0.3) 20px);
+}
+
+html, body {
+    height : 100%;
+}
+
+body {
+    margin    : 0;
+    font-size : 14px;
+}
+
+bry-scheduler > div {
+    flex : 1;
+}
+
+.b-sch-event-content {
+    display: flex;
+}

@@ -1,0 +1,37 @@
+{
+  "name": "drag-onto-tasks",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "builder": "node ../../../_shared/scripts/build.js",
+    "guide": "npm run builder guide scheduler vue",
+    "serve": "vue-cli-service serve --mode=development",
+    "start": "vue-cli-service serve --mode=development",
+    "build": "vue-cli-service build --mode=development || npm run guide",
+    "lint": "vue-cli-service lint",
+    "postinstall": "postinstall || npm run guide"
+  },
+  "postinstall": {
+    "node_modules/bryntum-resources/images/users": "copy public/images/users",
+    "node_modules/bryntum-resources/images/favicon.png": "copy public/favicon.png",
+    "../wrappers": "copy src/components/wrappers"
+  },
+  "dependencies": {
+    "bryntum-resources": "file:../../../_shared",
+    "bryntum-scheduler": "file:../../../../build",
+    "vue": "~2.5.21",
+    "vue-class-component": "~6.0.0",
+    "vue-property-decorator": "~7.0.0"
+  },
+  "devDependencies": {
+    "@vue/cli-plugin-babel": "~3.3.0",
+    "@vue/cli-plugin-typescript": "~3.3.0",
+    "@vue/cli-service": "~3.3.0",
+    "node-sass": "~4.11.0",
+    "postinstall": "~0.4.2",
+    "sass-loader": "~7.1.0",
+    "style-loader": "~0.23.1",
+    "typescript": "~3.0.0",
+    "vue-template-compiler": "~2.6.10"
+  }
+}

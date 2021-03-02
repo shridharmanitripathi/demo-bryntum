@@ -1,0 +1,39 @@
+<!--
+ *- Angular app template
+-->
+<header>
+  <h1><a id="title" href="../../../../#example-angular-advanced">Angular Routing + NgRx demo</a></h1>
+
+  <div class="bar-margin" #barMarginField>
+    <label>Bar margin:</label>
+    <input
+      min="0"
+      max="15"
+      type="number"
+      [value]="(barMargin | async).barMargin"
+      (change)="onBarMarginChange($event.target.value)"
+    >
+  </div>
+
+  <bry-button
+    #button1
+    text = "Scheduler 1"
+    toggleGroup = "navigation"
+    [pressed] = "isPressed1"
+    (click) = "router.navigate(['/scheduler1'])"
+  ></bry-button>
+
+  <bry-button
+    #button2
+    text = "Scheduler 2"
+    toggleGroup = "navigation"
+    [pressed] = "isPressed2"
+    (click) = "router.navigate(['/scheduler2'])"
+  ></bry-button>
+
+  <bry-fullscreen></bry-fullscreen>
+</header>
+
+<router-outlet></router-outlet>
+
+<!-- eof -->

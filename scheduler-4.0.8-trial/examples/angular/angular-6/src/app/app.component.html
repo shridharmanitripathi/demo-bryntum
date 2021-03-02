@@ -1,0 +1,33 @@
+<header>
+  <h1><a id="title" href="../../../#example-angular-angular-6">Angular 6 demo</a></h1>
+  <label class="sel-event">Selected event: <span>{{ scheduler.selectedEvent || 'None' }}</span></label>
+
+  <div class="barmargin">
+    <label>Bar margin</label>
+    <input min="0" max="20" type="number" [value]="barMargin" (input)="barMargin = $event.target.value-0">
+  </div>
+  <button (click)="onAddEventClick()"><i class="b-fa b-fa-plus"></i></button>
+  <button class="red" (click)="onRemoveEventClick()" [disabled]="scheduler.selectedEvent == ''"><i class="b-fa b-fa-trash"></i></button>
+</header>
+
+<div id="app">
+  <scheduler
+    #scheduler
+    [rowHeight]         = 60
+    [minHeight]         = 100
+    [barMargin]         = "barMargin"
+    [events]            = "events"
+    [resources]         = "resources"
+    [timeRanges]        = "timeRanges"
+    [startDate]         = "startDate"
+    [endDate]           = "endDate"
+    [columns]           = "columns"
+    [eventColor]        = "eventColor"
+    [eventStyle]        = "eventStyle"
+    [eventRenderer]     = "eventRenderer"
+    [eventEdit]         = "eventEdit"
+    [resourceImagePath] = "resourceImagePath"
+    (onSchedulerEvents) = "onSchedulerEvents($event)"
+  ></scheduler>
+
+</div>

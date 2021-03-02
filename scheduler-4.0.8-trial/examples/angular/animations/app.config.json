@@ -1,0 +1,10 @@
+{
+  "dependencies": [
+    {
+      "src": "../_shared",
+      "out": "../_shared/dist"
+    }
+  ],
+  "title": "Angular Animations demo",
+  "description": "The Scheduler will animate any changes to your rendered Events by default."
+}

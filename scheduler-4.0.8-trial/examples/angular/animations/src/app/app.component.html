@@ -1,0 +1,56 @@
+<!--
+ *- App component template
+ -->
+<header>
+    <h1><a id="title" href="../../../../#example-angular-animations">Angular Animations demo</a></h1>
+
+    <bry-slider
+        text          = "Animation duration"
+        [max]         = 3000
+        [min]         = 0
+        [showTooltip] = true
+        [showValue]   = false
+        [step]        = 200
+        [value]       = 600
+        [onChange]    = "onDurationChange"
+    ></bry-slider>
+
+    <bry-button
+        text       = "Max 1hr"
+        [onAction] = "onMaxHour"
+    ></bry-button>
+
+    <bry-button
+        text       = "After lunch"
+        [onAction] = "onAfterLunch"
+    ></bry-button>
+
+    <bry-button
+        text       = "Random update"
+        [onAction] = "onRandomUpdate"
+    ></bry-button>
+
+    <bry-button
+        text       = "Initial animation"
+        icon       = "b-fa b-fa-sliders-h"
+        toggleable = "true"
+        [onAction] = "onInitialAnimation"
+    ></bry-button>
+    <bry-fullscreen></bry-fullscreen>
+</header>
+
+<bry-scheduler
+    #scheduler
+    [barMargin]           = "schedulerConfig.barMargin"
+    [columns]             = "schedulerConfig.columns"
+    [crudManager]         = "schedulerConfig.crudManager"
+    [endDate]             = "schedulerConfig.endDate"
+    [eventColor]          = "schedulerConfig.eventColor"
+    [minHeight]           = "schedulerConfig.minHeight"
+    [rowHeight]           = "schedulerConfig.rowHeight"
+    [startDate]           = "schedulerConfig.startDate"
+    [timeRangesFeature]   = "schedulerConfig.timeRangesFeature"
+    [useInitialAnimation] = "schedulerConfig.useInitialAnimation"
+    [viewPreset]          = "schedulerConfig.viewPreset"
+    [resourceImagePath]   = "schedulerConfig.resourceImagePath"
+></bry-scheduler>

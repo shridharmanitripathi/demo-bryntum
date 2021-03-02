@@ -1,0 +1,50 @@
+{
+  "name": "advanced",
+  "version": "0.1.0",
+  "homepage": "./",
+  "private": true,
+  "scripts": {
+    "builder": "node ../../../_shared/scripts/build.js",
+    "guide": "npm run builder guide scheduler react",
+    "start": "cross-env NODE_OPTIONS='--max-old-space-size=8192' react-scripts start",
+    "build": "cross-env NODE_OPTIONS='--max-old-space-size=8192' react-scripts build || npm run guide",
+    "test": "cross-env NODE_OPTIONS='--max-old-space-size=8192' react-scripts test",
+    "eject": "cross-env NODE_OPTIONS='--max-old-space-size=8192' react-scripts eject",
+    "preinstall": "npm run builder",
+    "postinstall": "postinstall || npm run guide"
+  },
+  "postinstall": {
+    "node_modules/bryntum-resources/images/favicon.png": "copy public/favicon.png",
+    "node_modules/bryntum-resources/images/users": "copy public/users"
+  },
+  "dependencies": {
+    "axios": "~0.18.0",
+    "bryntum-react-shared": "file:../../_shared/build",
+    "bryntum-resources": "file:../../../_shared",
+    "bryntum-scheduler": "file:../../../../build",
+    "cross-env": "~7.0.2",
+    "i18next": "~15.0.7",
+    "i18next-browser-languagedetector": "~3.0.1",
+    "i18next-xhr-backend": "~2.0.1",
+    "react": "~16.8.5",
+    "react-dom": "~16.8.5",
+    "react-i18next": "~10.5.1",
+    "react-redux": "~6.0.1",
+    "react-scripts": "3.4.0",
+    "redux": "~4.0.1",
+    "redux-saga": "~1.0.2"
+  },
+  "devDependencies": {
+    "node-sass": "~4.9.4",
+    "postinstall": "~0.4.2"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": [
+    ">0.2%",
+    "not dead",
+    "ie >= 11",
+    "not op_mini all"
+  ]
+}
