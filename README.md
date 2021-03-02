@@ -1,5 +1,5 @@
 # Getting Started with Create React App
-[Bryntum-demo](https://www.bryntum.com/examples/scheduler/react/javascript/drag-from-grid) was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+[This demo](https://www.bryntum.com/examples/scheduler/react/javascript/drag-from-grid) was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 In the project directory, you can run:
 
