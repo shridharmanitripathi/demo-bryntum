@@ -8,6 +8,7 @@
 
 #unplannedContainer{
   height: 100vh;
+  border-right: 8px solid #94949478!important;
 }
 
 .b-grid-cell{
